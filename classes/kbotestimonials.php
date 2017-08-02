@@ -133,28 +133,6 @@ class kbotestimonials extends Module
         return $return;
 
     }
-    public function hookDisplayLeftColumn($params)
-    {
-        $productObj = new Product();
-        $products = $productObj->getProducts(Context::getContext()->language->id, 0, 0, 'id_product', 'DESC', false, true);
-        $this->context->smarty->assign(
-      array(
-          'kbotestimonials_name' => Configuration::get('kbotestimonials_NAME'),
-          'kbotestimonials_link' => $this->context->link->getModuleLink('kbotestimonials', 'display'),
-      )
-  );
-        return $this->display(_PS_MODULE_DIR_.$this->name, 'kbotestimonials.tpl');
-    }
-
-    public function hookDisplayRightColumn($params)
-    {
-        return $this->hookDisplayLeftColumn($params);
-    }
-
-    public function hookDisplayHeader()
-    {
-        $this->context->controller->addCSS($this->_path.'modules/mymodule/css/mymodule.css', 'all');
-    }
 
 
 }
