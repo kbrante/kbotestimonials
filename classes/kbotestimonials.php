@@ -97,11 +97,11 @@ class kbotestimonials extends Module
 
         foreach(Language::getLanguages(false) as $lang)
 
-            $tab->name[(int) $lang['id_lang']] = 'Blog';
+            $tab->name[(int) $lang['id_lang']] = 'kbotestimonials';
 
         // Nom du controller sans le mot clé "Controller"
 
-        $tab->class_name = 'AdminBlog';
+        $tab->class_name = 'Adminkbotestimonials';
 
         $tab->module = $this->name;
 
@@ -118,7 +118,7 @@ class kbotestimonials extends Module
 
     {
 
-        $classNames = array('admin_blog' => 'AdminBlog');
+        $classNames = array('admin_kbotestimonials' => 'Adminkbotestimonials');
 
         $return = true;
 
